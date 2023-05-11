@@ -1,6 +1,7 @@
 package com.Portfolio.Porfolio_Backend.Servicio;
 import com.Portfolio.Porfolio_Backend.Model.Habilidad;
 import com.Portfolio.Porfolio_Backend.Repository.HabilidadRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,12 +9,10 @@ import java.util.List;
 
 @Service
 public class HabilidadServicio {
+    @Autowired(required = false)
+     HabilidadRepository habilidadRepository;
 
-    private final HabilidadRepository habilidadRepository;
 
-    public HabilidadServicio(HabilidadRepository habilidadRepository) {
-        this.habilidadRepository = habilidadRepository;
-    }
 
     public List<Habilidad> obtenerHabilidades(){
         return  habilidadRepository.findAll();

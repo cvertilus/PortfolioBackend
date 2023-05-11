@@ -9,12 +9,9 @@ import java.util.List;
 
 @Service
 public class EducacionServicio {
+    @Autowired(required = false)
+    EducacionRepeository educacionRepeository;
 
-    private final EducacionRepeository educacionRepeository;
-
-    public EducacionServicio(EducacionRepeository educacionRepeository) {
-        this.educacionRepeository = educacionRepeository;
-    }
 
     public List<Educacion> obtenerEducaciones(){
         return  educacionRepeository.findAll();
