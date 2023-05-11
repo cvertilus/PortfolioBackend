@@ -9,7 +9,6 @@ import java.util.List;
 
 @Service
 public class HeroServicio {
-    @Autowired
     private  final HeroRepository heroRepository;
 
     public HeroServicio(HeroRepository heroRepository) {

@@ -2,7 +2,6 @@ package com.Portfolio.Porfolio_Backend.Controller;
 
 import com.Portfolio.Porfolio_Backend.Model.Educacion;
 import com.Portfolio.Porfolio_Backend.Servicio.EducacionServicio;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -14,8 +13,12 @@ import java.util.List;
 @RequestMapping("/educacion")
 @CrossOrigin("http://localhost:4200")
 public class EducacionController {
-    @Autowired
-    private  EducacionServicio educacionSercice ;
+
+    private final EducacionServicio educacionSercice ;
+
+    public EducacionController(EducacionServicio educacionSercice) {
+        this.educacionSercice = educacionSercice;
+    }
 
     @GetMapping("")
     private ResponseEntity<List<Educacion>> getEducaciones(){

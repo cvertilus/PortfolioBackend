@@ -2,10 +2,8 @@ package com.Portfolio.Porfolio_Backend.Controller;
 
 import com.Portfolio.Porfolio_Backend.Model.Habilidad;
 import com.Portfolio.Porfolio_Backend.Servicio.HabilidadServicio;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,8 +13,12 @@ import java.util.List;
 @RequestMapping("/habilidad")
 @CrossOrigin("http://localhost:4200")
 public class HabilidadController {
-    @Autowired
-    private HabilidadServicio habilidadServicio;
+
+    private final HabilidadServicio habilidadServicio;
+
+    public HabilidadController(HabilidadServicio habilidadServicio) {
+        this.habilidadServicio = habilidadServicio;
+    }
 
     @GetMapping("")
     private ResponseEntity<List<Habilidad>> getHabilidad(){

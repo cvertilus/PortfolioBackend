@@ -9,8 +9,7 @@ import java.util.List;
 
 @Service
 public class ExperienciaLaboralServicio {
-    @Autowired
-    private ExperienciaLaboralRepository experienciaLaboralRepository;
+    private final ExperienciaLaboralRepository experienciaLaboralRepository;
 
     public ExperienciaLaboralServicio(ExperienciaLaboralRepository experienciaLaboralRepository) {
         this.experienciaLaboralRepository = experienciaLaboralRepository;

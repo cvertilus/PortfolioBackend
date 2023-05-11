@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class EducacionServicio {
-    @Autowired
+
     private final EducacionRepeository educacionRepeository;
 
     public EducacionServicio(EducacionRepeository educacionRepeository) {
