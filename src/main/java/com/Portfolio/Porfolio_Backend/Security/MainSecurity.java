@@ -77,8 +77,6 @@ public class MainSecurity {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider())
-                .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
-                .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
