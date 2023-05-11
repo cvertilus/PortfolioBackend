@@ -1,5 +1,5 @@
 FROM amazoncorretto:17-alpine-jdk
 
-COPY target/Porfolio_Backend.jar Porfolio_Backend.jar
+COPY target/Portfolio_Backend.jar Portfolio_Backend.jar
 
-ENTRYPOINT ["java","-jar","/Porfolio_Backend.jar"]
+ENTRYPOINT ["java","-jar","/Portfolio_Backend.jar"]
