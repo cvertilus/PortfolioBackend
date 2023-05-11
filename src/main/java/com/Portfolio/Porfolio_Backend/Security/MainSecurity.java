@@ -2,6 +2,7 @@ package com.Portfolio.Porfolio_Backend.Security;
 
 import com.Portfolio.Porfolio_Backend.Security.JsonWebToken.JWTEntryPoint;
 import com.Portfolio.Porfolio_Backend.Security.JsonWebToken.JWTFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,8 +27,8 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 
 @EnableWebSecurity
-@EnableMethodSecurity
 @Configuration
+@RequiredArgsConstructor
 public class MainSecurity {
     @Autowired
     UserDetailsService userDetailsService;
@@ -60,7 +61,7 @@ public class MainSecurity {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.cors().disable()
+        return http.cors().and()
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll().and()
@@ -78,4 +79,5 @@ public class MainSecurity {
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
+
 }
