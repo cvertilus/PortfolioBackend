@@ -59,10 +59,6 @@ public class MainSecurity {
        return configuration.getAuthenticationManager();
     }
 
-    @Bean(name = "mvcHandlerMappingIntrospector")
-    public HandlerMappingIntrospector mvcHandlerMappingIntrospector() {
-        return new HandlerMappingIntrospector();
-    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
