@@ -31,15 +31,15 @@ import java.util.Set;
 @RequestMapping("/auth")
 @CrossOrigin
 public class AuthController {
-    @Autowired
+    @Autowired(required = false)
     PasswordEncoder passwordEncoder;
-    @Autowired
+    @Autowired(required = false)
     AuthenticationManager authenticationManager;
-    @Autowired
+    @Autowired(required = false)
     UsuarioService usuarioService;
-    @Autowired
+    @Autowired(required = false)
     RolService rolService;
-    @Autowired
+    @Autowired(required = false)
     JWTProvider jwtProvider;
 
     @PostMapping("/nuevo")

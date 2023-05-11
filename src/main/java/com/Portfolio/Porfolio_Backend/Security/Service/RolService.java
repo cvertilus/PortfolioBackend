@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class RolService {
-    @Autowired
+    @Autowired(required = false)
     private RolRepository rolRepository;
 
     public Optional<Rol> getByRolNombre(RolNombre rolNombre){

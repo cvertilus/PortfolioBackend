@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 @Transactional
 public class UsuarioService {
-    @Autowired
+    @Autowired(required = false)
     private UsuarioRepository usuarioRepository;
 
     public Optional<Usuario> getByNombreUsuario(String nombreUsuario){
