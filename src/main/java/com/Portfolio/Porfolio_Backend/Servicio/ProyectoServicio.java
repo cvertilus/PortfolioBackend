@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class ProyectoServicio {
-    @Autowired
+    @Autowired(required = false)
     private ProyectoRepeositoy proyectoRepeositoy;
 
 
