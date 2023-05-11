@@ -2,18 +2,17 @@ package com.Portfolio.Porfolio_Backend.Servicio;
 
 import com.Portfolio.Porfolio_Backend.Model.Proyecto;
 import com.Portfolio.Porfolio_Backend.Repository.ProyectoRepeositoy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ProyectoServicio {
+    @Autowired
+    private ProyectoRepeositoy proyectoRepeositoy;
 
-    private final ProyectoRepeositoy proyectoRepeositoy;
 
-    public ProyectoServicio(ProyectoRepeositoy proyectoRepeositoy) {
-        this.proyectoRepeositoy = proyectoRepeositoy;
-    }
 
     public List<Proyecto> obtenerProyectos(){
         return  proyectoRepeositoy.findAll();
