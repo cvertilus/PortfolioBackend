@@ -28,8 +28,8 @@ public class JWTProvider {
     @Value("${spring.jwt.secret}")
     private  String JWT_SECRET;
 
-    @Value("${spring.jwt.expiration}")
-    private int JWT_EXPIRATION_TIME_IN_MILLISECONDS;
+
+    private int JWT_EXPIRATION_TIME_IN_MILLISECONDS = 18000000;
 
     public String generateToken(String userName){
         Map<String, Object> claims = new HashMap<>();
