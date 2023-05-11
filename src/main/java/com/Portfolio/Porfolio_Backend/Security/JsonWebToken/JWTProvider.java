@@ -25,8 +25,8 @@ import java.util.function.Function;
 @NoArgsConstructor
 public class JWTProvider {
 
-    @Value("${spring.jwt.secret}")
-    private  String JWT_SECRET;
+
+    private  String JWT_SECRET = "6E5A7234753777217A25432A462D4A614E645267556B58703273357638792F41";
 
 
     private int JWT_EXPIRATION_TIME_IN_MILLISECONDS = 18000000;
