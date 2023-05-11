@@ -2,12 +2,14 @@ package com.Portfolio.Porfolio_Backend.Servicio;
 
 import com.Portfolio.Porfolio_Backend.Model.Hero;
 import com.Portfolio.Porfolio_Backend.Repository.HeroRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class HeroServicio {
+    @Autowired
     private  final HeroRepository heroRepository;
 
     public HeroServicio(HeroRepository heroRepository) {

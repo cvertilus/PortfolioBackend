@@ -2,6 +2,7 @@ package com.Portfolio.Porfolio_Backend.Controller;
 
 import com.Portfolio.Porfolio_Backend.Model.Hero;
 import com.Portfolio.Porfolio_Backend.Servicio.HeroServicio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -13,11 +14,10 @@ import java.util.List;
 @RequestMapping("/hero")
 @CrossOrigin("http://localhost:4200")
 public class HeroController {
-    private  final HeroServicio heroServicio;
+    @Autowired
+    private  HeroServicio heroServicio;
 
-    public HeroController(HeroServicio heroServicio) {
-        this.heroServicio = heroServicio;
-    }
+
 
     @GetMapping("")
     private ResponseEntity<List<Hero>> getHero(){

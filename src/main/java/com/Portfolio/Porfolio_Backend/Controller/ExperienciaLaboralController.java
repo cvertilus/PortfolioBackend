@@ -2,6 +2,7 @@ package com.Portfolio.Porfolio_Backend.Controller;
 
 import com.Portfolio.Porfolio_Backend.Model.ExperienciaLaboral;
 import com.Portfolio.Porfolio_Backend.Servicio.ExperienciaLaboralServicio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -14,11 +15,8 @@ import java.util.List;
 @RequestMapping("/experiencia")
 @CrossOrigin("http://localhost:4200")
 public class ExperienciaLaboralController {
-    private final ExperienciaLaboralServicio experienciaLaboralServicio;
-
-    public ExperienciaLaboralController(ExperienciaLaboralServicio experienciaLaboralServicio) {
-        this.experienciaLaboralServicio = experienciaLaboralServicio;
-    }
+    @Autowired
+    private  ExperienciaLaboralServicio experienciaLaboralServicio;
 
     @GetMapping("")
     private ResponseEntity<List<ExperienciaLaboral>> getExperienciaLaboral(){

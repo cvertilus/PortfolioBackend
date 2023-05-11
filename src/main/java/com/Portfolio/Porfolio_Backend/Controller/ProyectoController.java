@@ -2,6 +2,7 @@ package com.Portfolio.Porfolio_Backend.Controller;
 
 import com.Portfolio.Porfolio_Backend.Model.Proyecto;
 import com.Portfolio.Porfolio_Backend.Servicio.ProyectoServicio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -13,11 +14,8 @@ import java.util.List;
 @RequestMapping("/proyecto")
 @CrossOrigin("http://localhost:4200")
 public class ProyectoController {
-    private final ProyectoServicio proyectoServicio;
-
-    public ProyectoController(ProyectoServicio proyectoServicio) {
-        this.proyectoServicio = proyectoServicio;
-    }
+    @Autowired
+    private  ProyectoServicio proyectoServicio;
 
     @GetMapping("")
     private ResponseEntity<List<Proyecto>> getProyecto(){

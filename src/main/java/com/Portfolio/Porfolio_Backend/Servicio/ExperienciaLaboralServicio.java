@@ -2,13 +2,14 @@ package com.Portfolio.Porfolio_Backend.Servicio;
 
 import com.Portfolio.Porfolio_Backend.Model.ExperienciaLaboral;
 import com.Portfolio.Porfolio_Backend.Repository.ExperienciaLaboralRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ExperienciaLaboralServicio {
-
+    @Autowired
     private ExperienciaLaboralRepository experienciaLaboralRepository;
 
     public ExperienciaLaboralServicio(ExperienciaLaboralRepository experienciaLaboralRepository) {

@@ -15,10 +15,8 @@ import java.util.List;
 @RequestMapping("/habilidad")
 @CrossOrigin("http://localhost:4200")
 public class HabilidadController {
-    HabilidadServicio habilidadServicio;
-    public HabilidadController(HabilidadServicio habilidadServicio) {
-        this.habilidadServicio = habilidadServicio;
-    }
+    @Autowired
+    private HabilidadServicio habilidadServicio;
 
     @GetMapping("")
     private ResponseEntity<List<Habilidad>> getHabilidad(){
