@@ -24,9 +24,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 
-@Configuration
+
 @EnableWebSecurity
 @EnableMethodSecurity
+@Configuration
 public class MainSecurity {
     @Autowired
     UserDetailsService userDetailsService;
@@ -63,15 +64,15 @@ public class MainSecurity {
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll().and()
-                .authorizeHttpRequests().requestMatchers(HttpMethod.POST,SECURED_URLs_Post)
-                .hasAuthority("ADMIN").and()
-                .authorizeHttpRequests().requestMatchers(HttpMethod.PUT,SECURED_URLs_Put_Delete)
-                .hasAuthority("ADMIN").and()
-                .authorizeHttpRequests().requestMatchers(HttpMethod.DELETE,SECURED_URLs_Put_Delete)
-                .hasAuthority("ADMIN")
-                .anyRequest().authenticated()
-                .and().sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers(HttpMethod.POST,SECURED_URLs_Post).hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.PUT,SECURED_URLs_Put_Delete)
+                                .hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE,SECURED_URLs_Put_Delete)
+                                .hasAuthority("ADMIN")
+                        .anyRequest().authenticated()
+                )
+                .sessionManagement() .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
