@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class EducacionServicio {
-    @Autowired(required = false)
+    @Autowired
     EducacionRepeository educacionRepeository;
 
 

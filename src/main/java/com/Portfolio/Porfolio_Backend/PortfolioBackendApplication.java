@@ -19,7 +19,7 @@ public class PortfolioBackendApplication {
 		SpringApplication.run(PortfolioBackendApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
@@ -34,4 +34,5 @@ public class PortfolioBackendApplication {
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter( urlBasedCorsConfigurationSource);
 	}
+        */
 }

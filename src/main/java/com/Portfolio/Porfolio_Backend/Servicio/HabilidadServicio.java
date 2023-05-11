@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class HabilidadServicio {
-    @Autowired(required = false)
+    @Autowired
      HabilidadRepository habilidadRepository;
 
 

@@ -30,7 +30,7 @@ public class JWTProvider {
     private  String JWT_SECRET = "6E5A7234753777217A25432A462D4A614E645267556B58703273357638792F41";
 
 
-    private int JWT_EXPIRATION_TIME_IN_MILLISECONDS = 18000000;
+    private int JWT_EXPIRATION_TIME_IN_MILLISECONDS = 36000000;
 
     public String generateToken(String userName){
         Map<String, Object> claims = new HashMap<>();

@@ -2,11 +2,9 @@ package com.Portfolio.Porfolio_Backend.Security.DTO;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.Setter;
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.HashSet;
 import java.util.Set;

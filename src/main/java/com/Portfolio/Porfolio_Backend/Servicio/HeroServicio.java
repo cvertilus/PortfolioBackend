@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class HeroServicio {
-    @Autowired(required = false)
+    @Autowired
     HeroRepository heroRepository;
 
     public List<Hero> obtenerHero(){

@@ -13,7 +13,8 @@ import java.util.List;
 @RequestMapping("/educacion")
 @CrossOrigin("http://localhost:4200")
 public class EducacionController {
-
+    
+ 
     private final EducacionServicio educacionSercice ;
 
     public EducacionController(EducacionServicio educacionSercice) {

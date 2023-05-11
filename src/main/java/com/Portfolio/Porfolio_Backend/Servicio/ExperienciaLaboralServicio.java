@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class ExperienciaLaboralServicio {
-    @Autowired(required = false)
+    @Autowired
     ExperienciaLaboralRepository experienciaLaboralRepository;
 
 
