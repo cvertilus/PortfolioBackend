@@ -32,9 +32,6 @@ public class MainSecurity {
     UserDetailsService userDetailsService;
 
     @Autowired
-    JWTEntryPoint jwtEntryPoint;
-
-    @Autowired
     JWTFilter jwtFilter;
     private static final String[] SECURED_URLs_Post = {"/habilidad","/educacion","/experiencia","/proyecto","/hero"};
     private static final String[] SECURED_URLs_Put_Delete = {"/habilidad/{id}","/educacion/{id}","/experiencia/{id}","/proyecto" +
