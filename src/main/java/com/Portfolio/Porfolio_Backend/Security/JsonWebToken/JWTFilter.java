@@ -22,7 +22,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JWTFilter extends OncePerRequestFilter {
 
-    private final JWTProvider jwtService;
+    private final JWTProvider jwtService = new JWTProvider();
     private final UserDetailsService userDetailsService;
 
     @Override
