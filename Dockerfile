@@ -1,5 +1,5 @@
 FROM amazoncorretto:17
 
-COPY out/artifacts/PortfolioBackend_jar/PortfolioBackend.jar Portfolio_Backend.jar
+COPY target/Portfolio_Backend-0.0.1-SNAPSHOT.jar Portfolio_Backend.jar
 
 ENTRYPOINT ["java","-jar","/Portfolio_Backend.jar"]
