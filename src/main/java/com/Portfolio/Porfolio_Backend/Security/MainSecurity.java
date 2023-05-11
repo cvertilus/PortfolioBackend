@@ -60,7 +60,7 @@ public class MainSecurity {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.cors().and()
+        return http.cors().disable()
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**").permitAll().and()
