@@ -17,12 +17,12 @@ public class JWTEntryPoint implements AuthenticationEntryPoint {
 
     @Override
     public void commence(HttpServletRequest req, HttpServletResponse resp, AuthenticationException authException) throws IOException, ServletException {
-        //logger.error("Error en el Metodo Commence");
+        logger.error("Error en el Metodo Commence");
         //resp.sendError(HttpServletResponse.SC_UNAUTHORIZED,"No estas Autorizado");
-        resp.setContentType("application/json");
-        resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-        //resp.sendError(HttpServletResponse.SC_UNAUTHORIZED,"No estas Autorizado");
-        resp.getOutputStream().println("{ \"error\": \"" + authException.getMessage() + "\" }");
+        //resp.setContentType("application/json");
+        //resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        resp.sendError(HttpServletResponse.SC_UNAUTHORIZED,"No estas Autorizado");
+        //resp.getOutputStream().println("{ \"error\": \"" + authException.getMessage() + "\" }");
 
     }
 }

@@ -13,6 +13,7 @@
 /home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Repository/ExperienciaLaboralRepository.java
 /home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Repository/HabilidadRepository.java
 /home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Security/DTO/NuevoUsuario.java
+/home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Utils/CrearRoles.java
 /home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Servicio/HeroServicio.java
 /home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Servicio/ExperienciaLaboralServicio.java
 /home/colby/NetBeansProjects/PortfolioBackend/src/main/java/com/Portfolio/Porfolio_Backend/Model/Habilidad.java

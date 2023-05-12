@@ -33,6 +33,10 @@ public class MainSecurity {
 
     @Autowired
     JWTFilter jwtFilter;
+    
+    @Autowired
+    JWTEntryPoint jwtEntryPoint;
+    
     private static final String[] SECURED_URLs_Post = {"/habilidad","/educacion","/experiencia","/proyecto","/hero"};
     private static final String[] SECURED_URLs_Put_Delete = {"/habilidad/{id}","/educacion/{id}","/experiencia/{id}","/proyecto" +
             "/{id}",
@@ -71,6 +75,8 @@ public class MainSecurity {
                                 .hasAuthority("ADMIN")
                         .anyRequest().authenticated()
                 )
+                .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
+                .and()
                 .sessionManagement() .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider())

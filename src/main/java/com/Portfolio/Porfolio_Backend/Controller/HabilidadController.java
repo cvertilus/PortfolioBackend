@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/habilidad")
-@CrossOrigin("http://localhost:4200")
 public class HabilidadController {
 
     private final HabilidadServicio habilidadServicio;

@@ -1,6 +1,7 @@
 com/Portfolio/Porfolio_Backend/Model/Educacion.class
 com/Portfolio/Porfolio_Backend/Model/Habilidad.class
 com/Portfolio/Porfolio_Backend/Controller/EducacionController.class
+com/Portfolio/Porfolio_Backend/Utils/CrearRoles.class
 com/Portfolio/Porfolio_Backend/Security/Service/UserDetailService.class
 com/Portfolio/Porfolio_Backend/Security/Model/Usuario.class
 com/Portfolio/Porfolio_Backend/Security/Controller/AuthController.class
