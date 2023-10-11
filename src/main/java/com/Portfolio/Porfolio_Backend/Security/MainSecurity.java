@@ -73,7 +73,9 @@ public class MainSecurity {
                                 .hasAuthority("ADMIN")
                         .requestMatchers(HttpMethod.DELETE,SECURED_URLs_Put_Delete)
                                 .hasAuthority("ADMIN")
+                        .requestMatchers(HttpMethod.GET, SECURED_URLs_Post).permitAll()
                         .anyRequest().authenticated()
+                        
                 )
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and()
